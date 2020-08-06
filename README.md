@@ -2,6 +2,30 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
 
+# About SpaceX
+
+This codebase was created to demonstrate a fully fledged application built with Angular that interacts with SpaceX API 
+and fetches all required information and displays in UI. This application has followed Mobile first design approach and
+fully responsive accross Mobile, Tab & Desktop. Also User should be able to Filter the results with help of provided Filters.
+
+# Tech Stack used
+
+Development - Angular 10, TypeScript, JavaScript (ES6), Html5, Css3, SCSS, Flexbox, Css-grid
+
+Unit tests - Jasmine, Karma
+
+Hosting - Github pages
+
+Development Ide - VS code
+
+
+
+# Live Demo
+
+https://sarojswain.github.io/Spacex-Angular/
+
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
