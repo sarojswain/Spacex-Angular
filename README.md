@@ -8,6 +8,10 @@ This codebase was created to demonstrate a fully fledged application built with 
 and fetches all required information and displays in UI. This application has followed Mobile first design approach and
 fully responsive accross Mobile, Tab & Desktop. Also User should be able to Filter the results with help of provided Filters.
 
+# Live Demo
+
+https://sarojswain.github.io/Spacex-Angular/
+
 # Tech Stack used
 
 Development - Angular 10, TypeScript, JavaScript (ES6), Html5, Css3, SCSS, Flexbox, Css-grid
@@ -19,11 +23,33 @@ Hosting - Github pages
 Development Ide - VS code
 
 
+## Code Coverage
+Have written development test cases using Jasmine & Karma frameworks & mantained code coverage above 80%.
 
-# Live Demo
+[<img src="https://raw.githubusercontent.com/sarojswain/Flexbox/master/snapshots/Unit%20Tests%20-%20Code%20Coverage.PNG" align="left" height="300px" width="100%" alt="code coverage snapshot" />]
 
-https://sarojswain.github.io/Spacex-Angular/
+## Application snapshots
 
+<div align="center">
+  <h2>Mobile View</h2>
+  <img src="https://raw.githubusercontent.com/sarojswain/Flexbox/master/snapshots/Mobile%20View%20-%201.PNG" >
+</div>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/sarojswain/Flexbox/master/snapshots/Mobile%20View%20-%202.PNG" >
+</div>
+
+
+<div align="center">
+ <h2>Tablet View</h2>
+ <img src="https://raw.githubusercontent.com/sarojswain/Flexbox/master/snapshots/Tablet-View.PNG" >
+</div>
+
+
+<div align="center">
+ <h2>Desktop View</h2>
+ <img src="https://raw.githubusercontent.com/sarojswain/Flexbox/master/snapshots/Desktop-View.PNG" >
+</div>
 
 
 ## Development server
