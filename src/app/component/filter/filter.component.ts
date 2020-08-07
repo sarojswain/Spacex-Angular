@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { FilterTypes } from '../../constants/filter.model';
 
@@ -30,9 +30,15 @@ export class FilterComponent implements OnInit {
     '2019',
     '2020',
   ];
-  constructor(private router: Router) {}
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.route.queryParams.subscribe((params) => {
+      if (params.launch_year) { this.activeYear = params.launch_year; }
+      if (params.launch_success) { this.launchFilter = params.launch_success; }
+      if (params.landing_success) { this.landingFilter = params.landing_success; }
+    });
+  }
 
   onClickYearFilter(year: string): void {
     if (year === this.activeYear) {

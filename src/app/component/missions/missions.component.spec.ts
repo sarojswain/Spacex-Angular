@@ -5,6 +5,8 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { MissionsComponent } from './missions.component';
 import { AppService } from '../../app.service';
 
+import { of } from 'rxjs';
+
 describe('MissionsComponent', () => {
   let component: MissionsComponent;
   let fixture: ComponentFixture<MissionsComponent>;
@@ -28,26 +30,31 @@ describe('MissionsComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('get spacex mission data', () => {
+  it('get spacex mission data', async () => {
     const arr = [
       {
-        missionPatch: 'https://images2.imgbox.com/3c/0e/T8iJcSN3_o.png',
-        missionName: 'FalconSat',
-        flightNumber: 1,
-        missionId: ['RAAABR'],
-        launchYear: '2019',
-        launchSuccess: true,
+        links: {
+          mission_patch_small: 'https://images2.imgbox.com/3c/0e/T8iJcSN3_o.png'
+        },
+        mission_name: 'FalconSat',
+        flight_number: 1,
+        mission_id: ['RAAABR'],
+        launch_year: '2019',
+        launch_success: true,
       },
       {
-        missionPatch: 'https://images2.imgbox.com/3c/0e/T8iJcSN3_o.png',
-        missionName: 'FalconSat',
-        flightNumber: 1,
-        missionId: ['RAAABR'],
-        launchYear: '2019',
-        launchSuccess: true,
-      },
+        links: {
+          mission_patch_small: 'https://images2.imgbox.com/3c/0e/T8iJcSN3_o.png'
+        },
+        mission_name: 'FalconSat',
+        flight_number: 1,
+        mission_id: ['RAAABR'],
+        launch_year: '2019',
+        launch_success: true,
+      }
     ];
-    spyOn(service, 'fetchData').and.callThrough();
-    expect(service.fetchData).toHaveBeenCalled();
+    spyOn(service, 'fetchData').and.returnValue(of(arr));
+    component.getSpacexMissions({});
+    expect(component.spaceXDataList.length).toBe(2);
   });
 });
